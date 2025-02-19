@@ -1,0 +1,11 @@
+services:
+  front:
+    build:
+      context: .
+      dockerfile: docker/front/Dockerfile
+      target: dev
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./front:/home/ubuntu/app/front
+    tty: "true"
